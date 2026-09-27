@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-heading: 'Fredoka', cursive, system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    
+    --color-school-blue: #0284c7;
+    --color-school-yellow: #f59e0b;
+    --color-school-green: #10b981;
+    --color-school-orange: #f97316;
+    --color-school-purple: #8b5cf6;
+    --color-school-pink: #f43f5e;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+}
+
+/* Custom Floating & Bouncing Animations with Organic Curves */
+@keyframes floatGentle {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate3d(3px, -8px, 0) rotate(1.2deg);
+    }
+    50% {
+        transform: translate3d(0px, -15px, 0) rotate(-0.5deg);
+    }
+    75% {
+        transform: translate3d(-3px, -7px, 0) rotate(-1.5deg);
+    }
+}
+
+@keyframes floatReverse {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate3d(-3px, 7px, 0) rotate(-1.2deg);
+    }
+    50% {
+        transform: translate3d(0px, 14px, 0) rotate(0.8deg);
+    }
+    75% {
+        transform: translate3d(3px, 6px, 0) rotate(1.4deg);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.35);
+    }
+    50% {
+        box-shadow: 0 0 28px rgba(245, 158, 11, 0.65);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+.animate-float {
+    animation: floatGentle 6.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+.animate-float-reverse {
+    animation: floatReverse 7.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulseGlow 3s infinite;
+}
+
+.animate-wiggle {
+    animation: wiggle 2.5s ease-in-out infinite;
+}
+
+/* 3D Tilt Card Effects (Fluid JS Spring Physics) */
+.card-3d-wrap {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+
+.card-3d {
+    transform-style: preserve-3d;
+    will-change: transform;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.card-3d * {
+    pointer-events: none;
+}
+
+.card-3d a, .card-3d button {
+    pointer-events: auto;
+}
+
+
+
+.card-3d-content {
+    transform: translateZ(30px);
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-card-colored {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Custom School Decorative Waves and Patterns */
+.bg-doodle {
+    background-image: radial-gradient(#e0f2fe 1.5px, transparent 1.5px), radial-gradient(#fef3c7 1.5px, #ffffff 1.5px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+    border: 2px solid #f1f5f9;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.25s ease-out forwards;
+}
