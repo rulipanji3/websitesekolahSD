@@ -7,3 +7,4 @@
 .env.backup
 .env.production
 *.log
+*.pem
