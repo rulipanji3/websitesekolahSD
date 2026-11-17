@@ -1,5 +1,9 @@
 <?php
 
+// Tandai runtime sebagai Vercel agar bootstrap/app.php memakai /tmp/storage
+$_ENV['VERCEL'] = $_SERVER['VERCEL'] = '1';
+putenv('VERCEL=1');
+
 if (empty($_SERVER['REMOTE_ADDR'])) {
     $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
 }
