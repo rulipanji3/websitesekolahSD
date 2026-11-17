@@ -50,7 +50,7 @@
                         <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                             <i data-lucide="mail" class="w-4 h-4"></i>
                         </div>
-                        <input type="email" id="email" name="email" value="{{ old('email', 'admin@bintangceria.sch.id') }}" required autofocus class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none text-sm transition">
+                        <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Masukkan email admin" required autofocus class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none text-sm transition">
                     </div>
                 </div>
 
@@ -60,9 +60,8 @@
                         <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                             <i data-lucide="lock" class="w-4 h-4"></i>
                         </div>
-                        <input type="password" id="password" name="password" value="admin123" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none text-sm transition">
+                        <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" required class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none text-sm transition">
                     </div>
-                    <p class="text-[11px] text-slate-400 mt-1">Default demo: <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-700">admin123</code></p>
                 </div>
 
                 <div class="flex items-center justify-between pt-1">
