@@ -17,6 +17,7 @@
 /public/storage
 /storage/*.key
 *.pem
+!database/certs/isrgrootx1.pem
 /storage/pail
 /vendor
 _ide_helper.php

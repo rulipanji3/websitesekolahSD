@@ -8,3 +8,4 @@
 .env.production
 *.log
 *.pem
+!database/certs/isrgrootx1.pem
