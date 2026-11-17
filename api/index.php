@@ -1,5 +1,9 @@
 <?php
 
+if (empty($_SERVER['REMOTE_ADDR'])) {
+    $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+}
+
 // Pastikan direktori storage sementara di /tmp tersedia pada environment read-only Vercel
 foreach ([
     '/tmp/storage/app/public',

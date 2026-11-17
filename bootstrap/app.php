@@ -11,7 +11,7 @@ $app = Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        $middleware->trustProxies(at: '*');
+        $middleware->trustProxies(at: ['0.0.0.0/0', '::/0']);
         $middleware->redirectTo(
             guests: '/admin/login',
             users: '/admin/pendaftaran'
