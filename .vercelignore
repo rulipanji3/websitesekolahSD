@@ -1,0 +1,9 @@
+/vendor
+/node_modules
+/screenshots
+/tests
+.git
+.env
+.env.backup
+.env.production
+*.log
